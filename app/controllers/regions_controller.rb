@@ -13,8 +13,8 @@ class RegionsController < ApplicationController
   end
 
   def create
-    @region = Region.create(region_params)
-    redirect_to region_path(region)
+    region = Region.create(region_params)
+    redirect_to regions_path(region)
   end
 
   def edit
@@ -27,6 +27,7 @@ class RegionsController < ApplicationController
 
       if region.save!
         redirect_to region_path(region)
+      end
   end
 
   def destory
@@ -40,5 +41,4 @@ class RegionsController < ApplicationController
   def region_params
     params.require(:region).permit(:name, :region)
   end
-
 end
