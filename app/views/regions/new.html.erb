@@ -1,0 +1,13 @@
+<h1>Create a new travel destination</h1>
+
+<%= simple_form_for @region do |form| %>
+  <%= form.input :name %>
+<br>
+  <%= form.input :region %>
+<br>
+  <%= form.submit "Submit" %>
+<% end %>
+
+<br>
+
+<%= link_to "Home Page", regions_path %>

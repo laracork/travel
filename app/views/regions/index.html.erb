@@ -1,0 +1,12 @@
+<h1>Travel Destinations</h1>
+
+<% @regions.each do |region| %>
+  <%= link_to region.title, region_path(region) %> <br>
+<% end %>
+
+<br>
+<br>
+
+<%= link_to "Create a new travel destination", new_region_path %>
+
+<br>
